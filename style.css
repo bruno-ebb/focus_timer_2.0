@@ -1,0 +1,107 @@
+:root {
+  font-size: 62.5%;
+
+  --bg-color:  hsl(0, 0%, 100%);
+  --font-color: hsl(240, 6%, 21%);
+
+  --card-bg-color: hsla(240, 9%, 89%, 1);
+  --card-bg-clicked: hsla(194, 97%, 31%, 1);
+
+  --fill-color: hsl(0, 0%, 100%);
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: flex-start;
+
+  background: var(--bg-color);
+}
+
+.hide {
+  display: none;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer {
+  max-width: 32rem;
+  margin-right: 19.2rem;
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 12.6rem;
+  line-height: 14.8rem;
+  text-transform: uppercase;
+  color: var(--font-color);
+}
+
+.numbers {
+  display: flex;
+  height: 14.8rem;
+  margin-bottom: 1.7rem;
+  justify-content: center;
+}
+
+.controls {
+  display: flex;
+  gap: 4rem
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.sound-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr 1fr;
+  gap: 3.2rem;
+
+  width: 30.8rem;
+  height: 33.6rem;
+}
+
+.cards {
+  padding: 4.8rem 4.3rem;
+  width: 13.8rem;
+  height: 15.2rem;
+  border-radius: 2.4rem;
+  background: var(--card-bg-color);
+
+  cursor: pointer;
+  transition: transform .35s;
+}
+
+.card1 {
+  padding: 4.8rem 4.8rem;
+}
+
+
+
+.sound-box:hover > :not(:hover) {
+  opacity: .4;
+  transform: scale(.9);
+}
+
+.clicked {
+  background: var(--card-bg-clicked);
+}
+
+.clicked svg path {
+  fill: var(--fill-color);
+}
