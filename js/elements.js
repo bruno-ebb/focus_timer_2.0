@@ -11,7 +11,16 @@ export {
   coffeeShop_Button,
   fireplace_Button,
   minutesDisplay,
-  secondsDisplay
+  secondsDisplay,
+  switchButton,
+  sunIcon,
+  moonIcon,
+  body,
+  sliders,
+  forestSlider,
+  rainSlider,
+  coffeeShopSlider,
+  fireplaceSlider
 };
 
 const playButton = document.querySelector('#play');
@@ -28,3 +37,14 @@ const fireplace_Button = document.querySelector('.card4');
 
 const minutesDisplay = document.querySelector('#minutes');
 const secondsDisplay = document.querySelector('#seconds');
+
+const switchButton = document.querySelector('.toggle-light-dark');
+const body = document.querySelector('body');
+const sunIcon = document.querySelector('.light');
+const moonIcon = document.querySelector('.dark');
+
+const sliders = document.querySelectorAll('input[type="range"]');
+const forestSlider = document.querySelector('#forest-volume');
+const rainSlider = document.querySelector('#rain-volume');
+const fireplaceSlider = document.querySelector('#fireplace-volume');
+const coffeeShopSlider = document.querySelector('#coffee-volume');

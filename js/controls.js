@@ -2,9 +2,9 @@
 export function Controls({
     playButton,
     pauseButton,
-    stopButton,
-    plusMinutesButton,
-    minusMinutesButton,
+    sunIcon,
+    moonIcon,
+    body
 }) {
   
   function play() {
@@ -22,11 +22,17 @@ export function Controls({
     pauseButton.classList.add('hide');
   }
 
+  function toggleDarkMode() {
+    body.classList.toggle('dark-mode');
+    sunIcon.classList.toggle('hide');
+    moonIcon.classList.toggle('hide');
+  }
 
   return {
     play,
     pause,
     stop,
+    toggleDarkMode
   }
 
 }

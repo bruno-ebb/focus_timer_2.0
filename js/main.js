@@ -5,25 +5,19 @@ import Sounds from "./sounds.js";
 import { 
   playButton,
   pauseButton,
-  stopButton,
-  plusMinutesButton,
-  minusMinutesButton,
-  songCards,
-  forest_Button,
-  rain_Button,
-  coffeeShop_Button,
-  fireplace_Button,
   minutesDisplay,
-  secondsDisplay
+  secondsDisplay,
+  sunIcon,
+  moonIcon,
+  body
 } from "./elements.js";
 
 const controls = Controls({
   playButton,
   pauseButton,
-  stopButton,
-  songCards,
-  plusMinutesButton,
-  minusMinutesButton
+  sunIcon,
+  moonIcon,
+  body
 });
 
 const timer = Timer({

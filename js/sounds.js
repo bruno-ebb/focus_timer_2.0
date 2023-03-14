@@ -1,4 +1,11 @@
 
+import { 
+  forestSlider,
+  rainSlider,
+  coffeeShopSlider,
+  fireplaceSlider
+ } from "./elements.js";
+
 export default function () {
 
   const bgForestAudio = new Audio("assets/sounds/Floresta.wav");
@@ -54,7 +61,6 @@ export default function () {
       bgForestAudio
     );
   }
-
   
   const pauseForest = () => {
     bgForestAudio.pause();
@@ -68,7 +74,6 @@ export default function () {
   const pauseFireplace = () => {
     bgFireplaceAudio.pause();
   }
-
 
   const playAudio = (card) => {
     const className = card.className
@@ -106,14 +111,27 @@ export default function () {
     }
   }
 
+  const forestVolume = () => {
+    bgForestAudio.volume = forestSlider.value / 100;
+  }
+  const rainVolume = () => {
+    bgRainAudio.volume = rainSlider.value / 100;
+  }
+  const coffeeShopVolume = () => {
+    bgCoffeeShopAudio.volume = coffeeShopSlider.value / 100;
+  }
+  const fireplaceVolume = () => {
+    bgFireplaceAudio.volume = fireplaceSlider.value / 100;
+  }
+
   return {
     timeEnd,
-    playCoffeeShop,
-    playFireplace,
-    playForest,
-    playRain,
     playAudio,
-    pauseAudio
+    pauseAudio,
+    forestVolume,
+    rainVolume,
+    coffeeShopVolume,
+    fireplaceVolume
   }
 
 }
